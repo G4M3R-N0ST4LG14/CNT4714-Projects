@@ -1,0 +1,78 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <display-name>Project3</display-name>
+    
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>project_3.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ClientUserServlet</servlet-name>
+        <servlet-class>project_3.ClientUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientUserServlet</servlet-name>
+        <url-pattern>/ClientUserServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>RootUserServlet</servlet-name>
+        <servlet-class>project_3.RootUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RootUserServlet</servlet-name>
+        <url-pattern>/RootUserServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SuppliersRecordInsertServlet</servlet-name>
+        <servlet-class>project_3.SuppliersRecordInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SuppliersRecordInsertServlet</servlet-name>
+        <url-pattern>/SuppliersRecordInsertServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PartsRecordInsertServlet</servlet-name>
+        <servlet-class>project_3.PartsRecordInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PartsRecordInsertServlet</servlet-name>
+        <url-pattern>/PartsRecordInsertServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>JobsRecordInsertServlet</servlet-name>
+        <servlet-class>project_3.JobsRecordInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>JobsRecordInsertServlet</servlet-name>
+        <url-pattern>/JobsRecordInsertServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ShipmentsRecordInsertServlet</servlet-name>
+        <servlet-class>project_3.ShipmentsRecordInsertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShipmentsRecordInsertServlet</servlet-name>
+        <url-pattern>/ShipmentsRecordInsertServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AccountantServlet</servlet-name>
+        <servlet-class>project_3.AccountantServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountantServlet</servlet-name>
+        <url-pattern>/AccountantServlet</url-pattern>
+    </servlet-mapping>
+</web-app>
+
