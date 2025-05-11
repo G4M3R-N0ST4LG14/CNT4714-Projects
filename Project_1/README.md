@@ -15,24 +15,24 @@ This project simulates a
 ### Output Specifications:
 
 1. An input conveyor is assigned to a routing station:
-    Routing Station Sx: Input conveyor assigned to conveyor number Cn.
+    - Routing Station Sx: Input conveyor assigned to conveyor number Cn.
 2. An output conveyor is assigned to a routing station:
-    Routing Station Sx: Output conveyor assigned to conveyor number Cn.
+    - Routing Station Sx: Output conveyor assigned to conveyor number Cn.
 3. A routing station’s workload is set:
-    Routing Station Sx Has Total Workload of n Package Groups.
+    - Routing Station Sx Has Total Workload of n Package Groups.
 4. A routing station is granted access to its input conveyor:
-    Routing Station Sx: Currently holds lock on input conveyor Cn.
+    - Routing Station Sx: Currently holds lock on input conveyor Cn.
 5. A routing station is granted access to its output conveyor:
-    Routing Station Sx: Currently holds lock on output conveyor Cm.
+    - Routing Station Sx: Currently holds lock on output conveyor Cm.
 6. A routing station unlocks its input conveyor:
-    Routing Station Sx: Unlocks/releases input conveyor Cn.
+    - Routing Station Sx: Unlocks/releases input conveyor Cn.
 7. A routing station unlocks its output conveyor:
-    Routing Station Sx: Unlocks/releases output conveyor Cm.
+    - Routing Station Sx: Unlocks/releases output conveyor Cm.
 8. A routing station unable to lock its output conveyor and releases its input conveyor lock:
-    Routing Station Sx: UNABLE TO LOCK OUTPUT CONVEYOR Cn. SYNCHRONIZATION ISSUE: Station Sy currently holds the lock on output conveyor Cn – Station Sx releasing lock on input conveyor Cm.
+    - Routing Station Sx: UNABLE TO LOCK OUTPUT CONVEYOR Cn. SYNCHRONIZATION ISSUE: Station Sy currently holds the lock on output conveyor Cn – Station Sx releasing lock on input conveyor Cm.
 9. A routing station has completed its workload:
-    /# # Routing Station Sx: going offline – work completed! BYE! # #
+    > # # Routing Station Sx: going offline – work completed! BYE! # #
 10. A routing station successfully moves packages in and out of the routing station:
-    * * Routing Station Sx: * * CURRENTLY HARD AT WORK MOVING PACKAGES. * *
+    - * * Routing Station Sx: * * CURRENTLY HARD AT WORK MOVING PACKAGES. * *
 11. A routing station completes a workflow:
-    Routing Station Sx: Package group completed - n package groups remaining to move.
+    - Routing Station Sx: Package group completed - n package groups remaining to move.
