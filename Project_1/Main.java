@@ -1,4 +1,3 @@
-package project_1;
 /*
     Name: Arturo Lara
     Course: CNT 4714 Summer 2024
