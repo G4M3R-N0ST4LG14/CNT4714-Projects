@@ -17,7 +17,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class Main {
     public static void main(String[] args) {
         // Insert file address in quotation marks
-        String file = "";
+        String file = "config.txt";
         // Takes the numbers of the file and puts them into an array
         int[] integers = ReadFile.readIntegers(file);
         int numberOfStations = integers[0];
@@ -27,18 +27,19 @@ public class Main {
             conveyorBelts.add(new ConveyorBelt(i - 1));
         }
         // Create the Routing Stations
-        for (int i = 0; i <= numberOfStations; i++) {
-
-        }
+        for (int i = 0; i <= numberOfStations; i++) {}
     }
 
     static class ConveyorBelt {
         private int number;
         private final ReentrantLock lock = new ReentrantLock();
+        
+        // Constructor that will set the conveyor number and initialize the lock
         public ConveyorBelt(int number) {
-        this.number = number;
+            this.number = number;
         }
 
+        // Getter methods to get the number and lock of the conveyor
         public int getNumber() {
             return number;
         }
@@ -65,8 +66,7 @@ public class Main {
             this.outputBelt = outputBelt;
             System.out.println("\t" + intro + "Output Conveyor assigned to conveyor number C" + outputBelt.getNumber() + ".");
             this.workload = workload;
-            System.out.println("\t" + intro + "Workload Set. Station S" +
-            stationNumber + " has a total of " + workload + " to move. \n");
+            System.out.println("\t" + intro + "Workload Set. Station S" + stationNumber + " has a total of " + workload + " to move. \n");
             System.out.println(intro + "Now Online And Ready To Move Packages\n\n\n");
         }
 

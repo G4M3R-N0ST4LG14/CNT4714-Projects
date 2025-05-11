@@ -28,6 +28,14 @@ the simulation. Afterwards, there will be one line for each station. These lines
 workload value for each station (i.e, the number of times it needs to move packages on the
 conveyor system). Only use integers and the maximum number of stations is 10.
 
+Ex. Input file (config.txt):
+>First line creates X number of stations
+3
+>Subsequent lines set the workload of the current stations starting at 0 to X 
+2
+3
+4
+
 ### Output Specifications:
 
 1. An input conveyor is assigned to a routing station:
@@ -52,3 +60,23 @@ conveyor system). Only use integers and the maximum number of stations is 10.
     > Routing Station Sx: * * CURRENTLY HARD AT WORK MOVING PACKAGES. * *
 11. A routing station completes a workflow:
     > Routing Station Sx: Package group completed - n package groups remaining to move.
+
+## File Descriptions
+
+### ReadFile.java
+
+Consists of a class called ReadFile which is used by the Main.java file to read the input for the simulation. 
+> Method readIntegers(String file): This is the method called upon to read the integers of a file using an adress inputed as a string and returns an integer array of the read file. 
+
+### Main.java
+
+The file with all the code related to achieving the objectives of this project and running the simulation of the packaging system. 
+> Class Main: This class will read the config.txt file from the address set by the user and uses the methods and classes listed below to set up the simulation using the main method. It creates the conveyor belts first so that the routing stations can link to them and automatically begin the routing process when they're initialized. 
+
+> Class ConveyorBelt: This static class is used the generate the conveyor belts and locks in our routing system.
+    >> Method getLock: Used by the RoutingStation class to attempt to lock onto the belt 
+
+> Class RoutingStation: This class represent the routing stations and will attemp to empty their workload when initialized. The constructor will provide all the information of the routing station upon initialization.
+    >> Method processPackages(): Is used to empty its workload after locking onto its appropriate conveyor belts and will generate a random amount of time to process the worklaod to simulate a random amount of packages.
+    >> Method waitBeforeAttemmpting(): Is used to add a random delay after failing to acquire a lock based on its station number before trying to lock on again
+    >> Method run(): This is the actual method used by the class to interact with the whole simulation, upon entering the lock acquisition phase it will attempt to acquire its input belt and if successful try to acquire its output belt, if unsuccessful it will wait a random amount of time and try again. If it succeedes in acquiring both it will process its workload and then release both locks once complete, returning to the start of the lock acquisition phase until its workload is 0. If it fails to acquire the output belt it will unlock its input belt and wait a random amount of time until trying again. 
