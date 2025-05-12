@@ -1,4 +1,4 @@
-### Project 3
+# Project 3
 
 The Project3 folder contains the Eclipse project containing every single file used to make the project work. 
 The Servlet files are in Project3\src\main\java\project_3
